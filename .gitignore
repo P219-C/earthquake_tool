@@ -3,3 +3,4 @@
 config.template.bat
 build.bat
 config.js
+.vscode
