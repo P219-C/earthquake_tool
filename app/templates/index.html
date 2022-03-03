@@ -1,7 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %} index {% endblock %}
+{% block title %}index{% endblock %}
 
 {% block body %}
-test
+    
+    <div class="row">
+        <div class="col-md-10" style='border: 1px solid red '>
+            <!-- READ THIS: https://gis.stackexchange.com/questions/315754/using-leaflet-inside-bootstrap-container -->
+            <div id="map"></div>
+        </div>
+    </div>
+
 {% endblock %}

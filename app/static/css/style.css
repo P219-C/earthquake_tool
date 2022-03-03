@@ -1,5 +1,7 @@
 body{
     background-color: rgb(237, 237, 237);
+    padding: 0;
+    margin: 0;
 }
 header{
     color:rgb(74, 170, 165);
@@ -11,4 +13,12 @@ header{
     /* background: rgb(74, 170, 165); */
     color: black;   /* color of the letters */
     padding: 0.5rem;
+}
+
+#map {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 600px;  /* or as desired */
+    width: 100%;
 }
