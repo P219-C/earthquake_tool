@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(237, 237, 237);
+}
+header{
+    color:rgb(74, 170, 165);
+    /* background-color: white; */
+}
+
+/* Background color of the brand */
+.navbar-light .navbar-brand {
+    /* background: rgb(74, 170, 165); */
+    color: black;   /* color of the letters */
+    padding: 0.5rem;
+}
