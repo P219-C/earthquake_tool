@@ -7,6 +7,8 @@ pip list --format=freeze > requirements.txt
 conda create -n <environment_name> python=3.7
 conda activate <environmnet_name>
 
+## DEFINITIONS
+"Affected population and affected GDP are defined as those experiencing flood water at any depth or ground motion intesities equal to or greater than Modified Mercalli Intensity (MMI) VI. (Europe and Central Asia Country Risk Profiles for Floods and Earthquakes, World Bank Group)
 
 ## REFERENCES
 - World Bank: https://www.worldbank.org/en/region/eca/publication/europe-and-central-asia-country-risk-profiles-for-floods-and-earthquakes
@@ -18,3 +20,5 @@ conda activate <environmnet_name>
 - GEMScienceTools (GitHub): https://github.com/GEMScienceTools
 - Openquake: https://platform.openquake.org/
 - USGS - Hazard and Risk Assessment: https://www.usgs.gov/programs/earthquake-hazards/hazard-and-risk-assessment
+- USGS Magnitude/Intensity Comparison (https://web.archive.org/web/20110623113247/http://earthquake.usgs.gov/learn/topics/mag_vs_int.php)
+- Per capita definition (https://www.investopedia.com/terms/p/per-capita-gdp.asp)
