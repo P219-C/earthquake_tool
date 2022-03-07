@@ -1,3 +1,44 @@
+function earthquakeBar(divBar) {
+    d3.json("https://earthquake.usgs.gov/fdsnws/event/1/query.geojson?starttime=2010-01-01%2000:00:00&endtime=2020-12-31%2023:59:59&minmagnitude=5&orderby=time-asc").then(data =>{
+        // console.log(data);
+
+        var normal_date = []
+        data.features.forEach(element => {
+            // console.log(element.properties.time)
+            var unixTime = element.properties.time;
+            var date = new Date(unixTime)
+            // console.log(date.toLocaleDateString("en-US"));
+            normal_date.push(date.getFullYear());
+        });
+        console.log(normal_date)
+
+        // Reduce function to obtain unique values in an array
+        const result = normal_date.reduce((total, value) => {
+            total[value] = (total[value] || 0) + 1;
+            return total;
+    }, {});
+
+    console.log(result);
+    console.log(Object.entries(result));
+    console.log(Object.keys(result));
+    console.log(Object.values(result));
+    
+        var layer = [
+            {
+                x: Object.keys(result),
+                y: Object.values(result),
+                type: "bar"
+            }
+        ];
+
+        var layout ={
+            title: "Number of earthquakes with magnitude >5"
+        }
+
+        Plotly.newPlot(divBar,layer, layout)
+    });
+};
+
 // // Function that will determine the color of a country based on the available information
 function chooseColor(country_code) {
 
@@ -95,7 +136,7 @@ function earthquakeMap(divMap, lat, lon) {
 
         
 
-        console.log(earthquakesLayer.features[0].geometry.coordinates[0], earthquakesLayer.features[0].geometry.coordinates[1]);
+        console.log(earthquakesLayer.features[0].properties.mag);
 
         var heatArray = [];
 
