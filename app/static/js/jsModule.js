@@ -1,3 +1,28 @@
+// // Function that will determine the color of a country based on the available information
+function chooseColor(country_code) {
+
+    var list_cc = ['AO','AL','AR','AG','AU','AT','BF','BZ','BO','BR','BT','CH','CL','CI',
+                'CM','CO','KM','CR','CY','DM','EG','ES','EE','FI','FJ','FM','GB','GT','GY','HN',
+                'ID','IR','IQ','IT','JM','JO','JP','KZ','KE','KG','KH','KN','KR','KW','LA','LC',
+                'LK','MA','MG','MX','ML','MM','MN','MZ','MU','MW','MY','NA','NE','NI','NP','NZ',
+                'PK','PA','PE','PH','PG','PY','RU','SD','SN','SB','SL','SV','SI','SZ','TG','TL',
+                'TN','TR','TZ','UG','UY','VU'];
+
+    var x = list_cc.includes(country_code);
+        console.log(x, list_cc.includes(country_code))
+        switch (x) {
+            case true:
+                return "blue";
+            case false:
+                return "grey";
+            default:
+                return "black";
+        }
+        
+};
+
+
+
 function earthquakeMap(divMap, lat, lon) {
     // Creating map object
     var myMap = L.map(divMap, {
@@ -18,12 +43,14 @@ function earthquakeMap(divMap, lat, lon) {
     // Use this link to get the geojson data.
     var linkCountries = "../static/data/countries.geojson";
 
+    
+
     // Our style object
     var mapStyle = {
         color: "black",
         fillColor: "pink",
         fillOpacity: 0.0,
-        weight: 0.25
+        weight: 1.0
     };
     
     // Grabbing our GeoJSON data..
