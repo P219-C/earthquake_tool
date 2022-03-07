@@ -15,6 +15,18 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/about_me")
+def about_me():
+    return render_template("about_me.html")
+
+@app.route("/analysis")
+def analysis():
+    return render_template("analysis.html")
+
+@app.route("/API_ETL")
+def api_etl():
+    return render_template("api.html")
+
 @app.route("/API/countries")
 def countries():
     engine = create_engine(db_path)
