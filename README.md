@@ -23,7 +23,7 @@ conda activate <environmnet_name>
 - USGS Magnitude/Intensity Comparison (https://web.archive.org/web/20110623113247/http://earthquake.usgs.gov/learn/topics/mag_vs_int.php)
 - Per capita definition (https://www.investopedia.com/terms/p/per-capita-gdp.asp)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/P219-C/earthquake_tool/main?urlpath=https%3A%2F%2Fgithub.com%2FP219-C%2Fearthquake_tool%2Fblob%2Fmain%2FETL%2FETL.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/P219-C/earthquake_tool/main)
 
 .. image:: https://mybinder.org/badge_logo.svg
- :target: https://mybinder.org/v2/gh/P219-C/earthquake_tool/main?urlpath=https%3A%2F%2Fgithub.com%2FP219-C%2Fearthquake_tool%2Fblob%2Fmain%2FETL%2FETL.ipynb
+ :target: https://mybinder.org/v2/gh/P219-C/earthquake_tool/main
