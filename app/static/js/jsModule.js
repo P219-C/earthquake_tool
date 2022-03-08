@@ -1,3 +1,32 @@
+/**
+ * This function creates a panel that displays the metadata associated to any sample
+ * @param {*} objectPanel 
+ */
+ function buildPanel(objectPanel){
+    var tbody = d3.select("tbody");
+    tbody.selectAll("tr").remove()
+    // console.log(objectPanel)
+
+    var var_death = parseInt((parseFloat(objectPanel.Population)*1000000)*parseFloat(objectPanel.DeathDisasters)/100000)
+    var var_population = parseFloat(objectPanel.Population)*1000000
+    tbody.append("tr").text(`Deaths and missing persons due to disasters: ${var_death}`);
+    tbody.append("tr").text(`Total population: ${var_population}`);
+    tbody.append("tr").text(`% of Deaths and missing persons due to disasters: ${(var_death * 100 / var_population).toPrecision(3)}%`);
+    tbody.append("tr").text(`GDP per capita (2017 PPP $): ${objectPanel.GDP_PerCapita}`);
+
+    
+
+};
+
+
+
+
+
+
+
+
+
+
 function earthquakeBar(divBar) {
     d3.json("https://earthquake.usgs.gov/fdsnws/event/1/query.geojson?starttime=2010-01-01%2000:00:00&endtime=2020-12-31%2023:59:59&minmagnitude=5&orderby=time-asc").then(data =>{
         // console.log(data);
@@ -10,7 +39,7 @@ function earthquakeBar(divBar) {
             // console.log(date.toLocaleDateString("en-US"));
             normal_date.push(date.getFullYear());
         });
-        console.log(normal_date)
+        // console.log(normal_date)
 
         // Reduce function to obtain unique values in an array
         const result = normal_date.reduce((total, value) => {
@@ -18,10 +47,10 @@ function earthquakeBar(divBar) {
             return total;
     }, {});
 
-    console.log(result);
-    console.log(Object.entries(result));
-    console.log(Object.keys(result));
-    console.log(Object.values(result));
+    // console.log(result);
+    // console.log(Object.entries(result));
+    // console.log(Object.keys(result));
+    // console.log(Object.values(result));
     
         var layer = [
             {
@@ -32,7 +61,13 @@ function earthquakeBar(divBar) {
         ];
 
         var layout ={
-            title: "Number of earthquakes with magnitude >5"
+            // title: "Number of earthquakes with magnitude >5"
+            xaxis: {
+                title: {text: 'YEAR'}
+            },
+            yaxis: {
+                title: {text: 'NUMBER OF EARTHQUAKES (Mw >= 5)'}
+            }
         }
 
         Plotly.newPlot(divBar,layer, layout)
@@ -136,7 +171,7 @@ function earthquakeMap(divMap, lat, lon) {
 
         
 
-        console.log(earthquakesLayer.features[0].properties.mag);
+        // console.log(earthquakesLayer);
 
         var heatArray = [];
 

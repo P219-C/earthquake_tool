@@ -4,11 +4,14 @@
 
 {% block body %}
 
-<p>Project results</p>
+
 
 <br>
 <div class="container-fluid">
     <div class="row justify-content-center">
+        <h2>Number of earthquakes with magnitude (Mw) >=5 from 2010 to 2020</h2>
+        <p>Description</p>
+        <br>
         <div class="col-6">
             <div id="earthquake_year"></div>
         </div>
@@ -19,9 +22,42 @@
 
 <div class="container-fluid">
     <div class="row">
+        <h2>2011 earthquake distribution</h2>
+        <p>Description</p>
+        <br>
         <div class="col-md-8">
             <!-- READ THIS: https://gis.stackexchange.com/questions/315754/using-leaflet-inside-bootstrap-container -->
             <div id="map"></div>
+        </div>
+        <div class="col-md-4">
+            <div class="well">
+                <h5>Country:</h5>
+                <!-- do i need onchange="optionChanged(this.value)"? -->
+                <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+                <select id="selDataset"></select> 
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">2011 Information</h4>
+                </div>
+                <div id="sample-metadata" class="panel-body">
+                    <table id="demographic-table" class="table">
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row justify-content-center">
+        <h2>Statistics of earthquakes by country in 2011</h2>
+        <p> If the selected country is absent there were no earthquakes with magnitudes higher or equal than 6 during 2011.</p>
+        <br>
+        <div class="col-8">
+            
+            <!-- <div class="container-plots"> -->
+            <div id="violin"></div>
+            <!-- </div> -->
         </div>
     </div>
 </div>
@@ -37,6 +73,7 @@
 <!-- Heatmap JS -->
     <script type="text/javascript" src="../static/js/leaflet-heat.js"></script>
 <!-- My JS code -->
+    <script type="text/javascript" src="../static/js/violin.js"></script>
     <script type="text/javascript" src="../static/js/jsModule.js"></script>
     <script type="text/javascript" src="../static/js/logic.js"></script>
 
