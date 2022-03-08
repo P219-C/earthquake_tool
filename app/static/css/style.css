@@ -22,3 +22,8 @@ header{
     height: 600px;  /* or as desired */
     width: 100%;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
