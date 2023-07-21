@@ -42,7 +42,7 @@ pytz==2021.3
 pyzmq==22.3.0
 requests==2.31.0
 reverse-geocoder==1.5.1
-scipy==1.7.3
+scipy==1.10.0
 setuptools==65.5.1
 six==1.16.0
 SQLAlchemy==1.4.32
