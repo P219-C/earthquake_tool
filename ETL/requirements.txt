@@ -32,7 +32,7 @@ pandas==1.3.5
 parso==0.8.3
 pickleshare==0.7.5
 Pillow==10.0.1
-pip==21.2.4
+pip==23.3
 pprintpp==0.4.0
 prompt-toolkit==3.0.27
 Pygments==2.15.0
