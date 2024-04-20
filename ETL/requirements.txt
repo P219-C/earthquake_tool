@@ -11,7 +11,7 @@ entrypoints==0.4
 Flask==2.2.5
 fonttools==4.43.0
 greenlet==1.1.2
-gunicorn==20.1.0
+gunicorn==22.0.0
 idna==3.3
 importlib-metadata==4.11.2
 ipykernel==6.9.1
